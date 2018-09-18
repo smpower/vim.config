@@ -68,7 +68,7 @@ let g:syntastic_javascript_checkers = ['javascript', 'jsx']
 
 Plugin 'airblade/vim-gitgutter'
 
-" Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline'
 " let g:airline_powerline_fonts = 1
 " 是否启用顶部 tabline
 " let g:airline#extensions#tabline#enabled = 1
@@ -76,11 +76,16 @@ Plugin 'airblade/vim-gitgutter'
 " let g:airline#extensions#tabline#left_sep = ' '
 " let g:airline#extensions#tabline#left_alt_sep = '|'
 
-" Plugin 'vim-airline/vim-airline-themes'
-" let g:airline_theme='bubblegum'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_theme='bubblegum'
 
 " Plugin 'majutsushi/tagbar'
 " map <F3> :TagbarToggle<CR>
+
+Plugin 'flowtype/vim-flow'
+let g:flow#enable=1 " 保存后自动检查
+let g:flow#errjmp=1 " 跳到错误处
+let g:flow#timeout=4 " 延时加载该插件
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -121,10 +126,10 @@ syntax enable
 syntax on
 
 " 自动缩进
-set autoindent
+" set autoindent
 
 " 智能缩进, 开启新行时使用
-set smartindent
+" set smartindent
 
 " 设置(软)制表符的宽度为 2
 " set tabstop=2
