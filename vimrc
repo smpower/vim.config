@@ -54,7 +54,7 @@ let g:bookmark_save_per_working_dir = 1
 let g:bookmark_auto_save = 1
 
 Plugin 'scrooloose/syntastic'
-execute pathogen#infect()
+" execute pathogen#infect()
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -79,6 +79,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 let g:airline_theme='bubblegum'
 
+Plugin 'NLKNguyen/papercolor-theme'
+
 " Plugin 'majutsushi/tagbar'
 " map <F3> :TagbarToggle<CR>
 
@@ -86,6 +88,8 @@ Plugin 'flowtype/vim-flow'
 let g:flow#enable=1 " 保存后自动检查
 let g:flow#errjmp=1 " 跳到错误处
 let g:flow#timeout=4 " 延时加载该插件
+
+Plugin 'Quramy/tsuquyomi'  " vim plugin for typescript
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -104,7 +108,9 @@ filetype plugin indent on    " required
 
 " 主题设置
 " colorscheme monokai
-colorscheme onedark
+" colorscheme onedark
+set background=light
+colorscheme PaperColor
 
 hi Normal ctermfg=252 ctermbg=none
 
